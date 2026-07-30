@@ -1,0 +1,6 @@
+{
+  "name": "HaptiQ",
+  "description": "Assistive haptic alert and live speech transcription app translating environmental sounds into tactile vibrations for Deaf and hard-of-hearing users.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
