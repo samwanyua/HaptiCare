@@ -17,27 +17,6 @@
 
 ---
 
-
-
-1. [Project Overview](#-project-overview)
-2. [The Problem](#-the-problem)
-3. [Core Features](#-core-features)
-4. [Architecture](#-architecture)
-5. [Project Structure](#-project-structure)
-6. [Tech Stack](#-tech-stack)
-7. [Getting Started](#-getting-started)
-8. [Environment Variables](#-environment-variables)
-9. [API Reference](#-api-reference)
-10. [Application Screens](#-application-screens)
-11. [Data Models & Types](#-data-models--types)
-12. [Haptic Engine](#-haptic-engine)
-13. [AI Integration](#-ai-integration)
-14. [Build & Deployment](#-build--deployment)
-15. [Design System](#-design-system)
-16. [Contributing](#-contributing)
-
----
-
 ##  Project Overview
 
 **HaptiCare**  is an inclusive technology platform developed by **HaptiCare Labs**, a team of Kenyan engineers and disability advocates. It pairs a physical haptic wristband device — the *HaptiCare One* — with a companion mobile web application that translates environmental sound into distinct, meaningful tactile vibration patterns in real time.
@@ -46,31 +25,12 @@ The app serves as both a **product landing page** (marketing/waitlist site) and 
 
 > *"Designed in Africa, built for the world."*
 
-View the live app in AI Studio: https://ai.studio/apps/94453a99-7709-4683-8566-92d9b62f3f81
 
 
 
-##  Architecture
 
-```
-Browser (React SPA)
-        │
-        ▼
-  Vite Dev Server ──── HMR (dev) / Static (prod)
-        │
-  Express Backend (server.ts)
-        │
-        ├── GET  /api/health          → Health check
-        ├── POST /api/translate       → Gemini text translation (EN ↔ SW)
-        └── POST /api/analyze-sound   → Gemini sound classification (JSON)
-              │
-              ▼
-       Google Gemini 2.5 Flash API
-```
 
-In development, the Express server proxies Vite's middleware directly — no separate frontend dev server is needed. In production, Vite builds the SPA to `dist/` and Express serves it statically with SPA fallback routing.
 
----
 
 ##  Project Structure
 
