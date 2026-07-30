@@ -17,7 +17,7 @@
 
 ---
 
-##  Table of Contents
+
 
 1. [Project Overview](#-project-overview)
 2. [The Problem](#-the-problem)
@@ -48,34 +48,7 @@ The app serves as both a **product landing page** (marketing/waitlist site) and 
 
 View the live app in AI Studio: https://ai.studio/apps/94453a99-7709-4683-8566-92d9b62f3f81
 
----
 
-
-###  Sound-to-Haptics Engine
-Detects ambient environmental sounds (fire alarms, traffic horns, baby cries, incoming calls, name recognition) and translates each into a **distinct vibration pattern** with custom waveforms.
-
-###  Mobile App Wireframe Simulator
-An embedded **phone frame mockup** rendering the complete companion wearable app with full interactivity:
-- Bluetooth band connectivity indicator
-- Battery level monitoring
-- Live haptic pulse preview with waveform visualizations
-- Navigation between all app screens
-
-###  AI Sound Classification (Gemini 2.5 Flash)
-Describe any sound in plain English and the AI engine classifies it, recommends a haptic vibration pattern, and assigns the appropriate urgency category — powered by **Google Gemini 2.5 Flash**.
-
-###  Live Call Transcription
-Real-time **speech-to-text** transcription using the Web Speech API with automatic **English ↔ Swahili translation** via Gemini, enabling Deaf users to visually follow phone calls.
-
-###  Custom Trigger Creator
-A step-by-step wizard for creating personalized sound triggers via:
-- **Record Mode**: Capture a 3-second audio sample
-- **Library Mode**: Choose from pre-built pattern presets
-- **AI Describe Mode**: Describe the sound in text and let Gemini classify it
-
-
-
----
 
 ##  Architecture
 
