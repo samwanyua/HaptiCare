@@ -440,7 +440,7 @@ export const HaptiCareLandingPage: React.FC = () => {
             <a href="#about" className="hover:text-[#006a62] dark:hover:text-[#7cf6e7]">About</a>
           </div>
           <div className="text-xs text-[#3d4947] dark:text-[#94a3b8]">
-            © 2024 HaptiCare Labs. All rights reserved.
+            © 2026 HaptiCare Labs. All rights reserved.
           </div>
         </div>
       </footer>
