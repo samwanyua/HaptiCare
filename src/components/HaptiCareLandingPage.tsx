@@ -364,7 +364,7 @@ export const HaptiCareLandingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="/Image_02.png"
+                src="/Image_03.png"
                 alt="HaptiCare wristband macro shot"
                 className="w-full h-auto rounded-3xl shadow-xl object-cover"
               />
