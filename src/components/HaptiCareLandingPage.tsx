@@ -105,9 +105,11 @@ export const HaptiCareLandingPage: React.FC = () => {
       <nav className="bg-[#faf8ff]/90 dark:bg-[#090d16]/90 backdrop-blur-md border-b border-[#bcc9c6] dark:border-[#1e293b] sticky top-0 z-40 transition-colors duration-300">
         <div className="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
           <div className="flex items-center space-x-2.5">
-            <div className="w-9 h-9 rounded-xl bg-[#006a62] text-white flex items-center justify-center font-bold text-lg shadow-xs">
-              H
-            </div>
+            <img
+              src="/Hapticare-logo.png"
+              alt="HaptiCare logomark"
+              className="w-9 h-9 object-contain"
+            />
             <div className="text-xl font-bold text-[#006a62] dark:text-[#7cf6e7] tracking-tight">HaptiCare Labs</div>
           </div>
           <div className="hidden md:flex items-center space-x-8 text-sm font-semibold text-[#505f76] dark:text-[#94a3b8]">
@@ -176,7 +178,7 @@ export const HaptiCareLandingPage: React.FC = () => {
                 style={{ animationDelay: '1s' }}
               ></div>
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrGv0oDfdor2yO0kxf2d8BljDlrTGvs5K8oUzXWeEj5ARat4CIxs18LuqGowcLlqGLqKEEyJ2EgIDqPBoZ27mRDPsfkm8YuBEFkzCFFVsjVb-b2XKqFPM8HcQxo5h3DEtmfM209Zj1UutVACjYy_YmrDWuok2cUlafjrNXPg9VQ4KaK7MLeso6Vc0O6SqKPodFuodqGjmfS0hOjrt5f3nIwptBT3tRzAHpIu-YgHy5FyiY792wsKNL"
+                src="/Image_01.png"
                 alt="HaptiCare wristband device preview"
                 className="relative z-20 w-4/5 h-auto drop-shadow-2xl object-contain rounded-3xl"
               />
@@ -299,12 +301,35 @@ export const HaptiCareLandingPage: React.FC = () => {
         </section>
 
         {/* Workflow Section: The Path to Perception */}
-        <section className="py-20 bg-[#f2f3ff] dark:bg-[#0f172a] overflow-x-auto no-scrollbar transition-colors duration-300" id="how">
-          <div className="max-w-7xl mx-auto px-6 mb-10">
+        <section className="py-20 bg-[#f2f3ff] dark:bg-[#0f172a] transition-colors duration-300" id="how">
+          <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
             <h2 className="text-3xl font-bold text-[#131b2e] dark:text-white">The Path to Perception</h2>
           </div>
 
-          <div className="flex px-6 gap-6 min-w-max pb-6 md:justify-center">
+          {/* Mobile / tablet: 3-column grid (2 rows of 3) */}
+          <div className="lg:hidden grid grid-cols-3 gap-6 px-6 max-w-2xl mx-auto">
+            {[
+              { icon: 'waves', label: 'Sound world', sub: 'Ambient environment' },
+              { icon: 'mic', label: 'Capture', sub: 'High-fidelity mics' },
+              { icon: 'neurology', label: 'AI Processing', sub: 'On-device neural engine' },
+              { icon: 'rule', label: 'Alert Decision', sub: 'Contextual filtering' },
+              { icon: 'vibration', label: 'Haptic Feedback', sub: 'Distinct vibration patterns' },
+              { icon: 'person_celebrate', label: 'User Awareness', sub: 'Instant mental map' },
+            ].map((step, idx) => (
+              <div key={idx} className="flex flex-col items-center space-y-3">
+                <div className="w-16 h-16 rounded-2xl bg-white dark:bg-[#1e293b] flex items-center justify-center text-[#006a62] dark:text-[#7cf6e7] shadow-sm">
+                  <span className="material-symbols-outlined text-2xl">{step.icon}</span>
+                </div>
+                <div className="text-center space-y-0.5">
+                  <h4 className="text-xs font-bold text-[#131b2e] dark:text-white leading-tight">{step.label}</h4>
+                  <p className="text-[10px] text-[#3d4947] dark:text-[#94a3b8] leading-tight">{step.sub}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: single row with arrows */}
+          <div className="hidden lg:flex px-6 gap-4 justify-center">
             {[
               { icon: 'waves', label: 'Sound world', sub: 'Ambient environment' },
               { icon: 'mic', label: 'Capture', sub: 'High-fidelity mics' },
@@ -333,12 +358,13 @@ export const HaptiCareLandingPage: React.FC = () => {
           </div>
         </section>
 
+
         {/* Product Showcase */}
         <section className="py-20 bg-[#dae2fd] dark:bg-[#111c33] transition-colors duration-300" id="product">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdoNn06DJNpT2xDXC_1pzFPqTbUYK7SjuwbyAUq2L35ZS3e3xl0l6zxgdRrRKfeVOS9SVdVFIqwkYVd2l2oUGKnK9vOPfRFI6XLDFBrgoFNnE9THB3TGNRprZQXfu8QjliolMqO5lFIGYF6nN7ZJtehmUwa5kKrOCLNK50KB0fFyw6Xagz7Y2FUH_PkrX8V8d2RaQnA_IKgyVM57E29CES0mum4-jRPuRGA11sg4JdfZFz9sE593Fy"
+                src="/Image_02.png"
                 alt="HaptiCare wristband macro shot"
                 className="w-full h-auto rounded-3xl shadow-xl object-cover"
               />
